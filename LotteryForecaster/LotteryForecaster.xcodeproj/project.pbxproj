@@ -7,23 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01F1DB4C0F5C5BBB7705EB2B /* Pods_LotteryForecaster.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CF56F0DD9E6523B18D49DE2 /* Pods_LotteryForecaster.framework */; };
 		72B5BE4B245C7016006E8BB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B5BE4A245C7016006E8BB5 /* AppDelegate.swift */; };
-		72B5BE4D245C7016006E8BB5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B5BE4C245C7016006E8BB5 /* SceneDelegate.swift */; };
-		72B5BE4F245C7016006E8BB5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B5BE4E245C7016006E8BB5 /* ViewController.swift */; };
-		72B5BE52245C7016006E8BB5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72B5BE50245C7016006E8BB5 /* Main.storyboard */; };
 		72B5BE54245C7016006E8BB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72B5BE53245C7016006E8BB5 /* Assets.xcassets */; };
 		72B5BE57245C7016006E8BB5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72B5BE55245C7016006E8BB5 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3CF56F0DD9E6523B18D49DE2 /* Pods_LotteryForecaster.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LotteryForecaster.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		72B5BE47245C7016006E8BB5 /* LotteryForecaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LotteryForecaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72B5BE4A245C7016006E8BB5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		72B5BE4C245C7016006E8BB5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		72B5BE4E245C7016006E8BB5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		72B5BE51245C7016006E8BB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		72B5BE53245C7016006E8BB5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		72B5BE56245C7016006E8BB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		72B5BE58245C7016006E8BB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		82C723AE87DA6CD2BAA5B4F1 /* Pods-LotteryForecaster.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LotteryForecaster.debug.xcconfig"; path = "Target Support Files/Pods-LotteryForecaster/Pods-LotteryForecaster.debug.xcconfig"; sourceTree = "<group>"; };
+		C9900B4A1C50A34117B41993 /* Pods-LotteryForecaster.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LotteryForecaster.release.xcconfig"; path = "Target Support Files/Pods-LotteryForecaster/Pods-LotteryForecaster.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +29,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01F1DB4C0F5C5BBB7705EB2B /* Pods_LotteryForecaster.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +41,8 @@
 			children = (
 				72B5BE49245C7016006E8BB5 /* LotteryForecaster */,
 				72B5BE48245C7016006E8BB5 /* Products */,
+				76B7B0F59CCBA6C12054B521 /* Pods */,
+				CFF28959108989B6E1B56B88 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,14 +58,29 @@
 			isa = PBXGroup;
 			children = (
 				72B5BE4A245C7016006E8BB5 /* AppDelegate.swift */,
-				72B5BE4C245C7016006E8BB5 /* SceneDelegate.swift */,
-				72B5BE4E245C7016006E8BB5 /* ViewController.swift */,
-				72B5BE50245C7016006E8BB5 /* Main.storyboard */,
 				72B5BE53245C7016006E8BB5 /* Assets.xcassets */,
 				72B5BE55245C7016006E8BB5 /* LaunchScreen.storyboard */,
 				72B5BE58245C7016006E8BB5 /* Info.plist */,
 			);
 			path = LotteryForecaster;
+			sourceTree = "<group>";
+		};
+		76B7B0F59CCBA6C12054B521 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				82C723AE87DA6CD2BAA5B4F1 /* Pods-LotteryForecaster.debug.xcconfig */,
+				C9900B4A1C50A34117B41993 /* Pods-LotteryForecaster.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		CFF28959108989B6E1B56B88 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3CF56F0DD9E6523B18D49DE2 /* Pods_LotteryForecaster.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +90,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 72B5BE5B245C7016006E8BB5 /* Build configuration list for PBXNativeTarget "LotteryForecaster" */;
 			buildPhases = (
+				3374A8B9394D6543B59C9E49 /* [CP] Check Pods Manifest.lock */,
 				72B5BE43245C7016006E8BB5 /* Sources */,
 				72B5BE44245C7016006E8BB5 /* Frameworks */,
 				72B5BE45245C7016006E8BB5 /* Resources */,
+				43C0DFE9DA2CD407BB0CAB0D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -127,34 +145,65 @@
 			files = (
 				72B5BE57245C7016006E8BB5 /* LaunchScreen.storyboard in Resources */,
 				72B5BE54245C7016006E8BB5 /* Assets.xcassets in Resources */,
-				72B5BE52245C7016006E8BB5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3374A8B9394D6543B59C9E49 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LotteryForecaster-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		43C0DFE9DA2CD407BB0CAB0D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LotteryForecaster/Pods-LotteryForecaster-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LotteryForecaster/Pods-LotteryForecaster-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LotteryForecaster/Pods-LotteryForecaster-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		72B5BE43245C7016006E8BB5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				72B5BE4F245C7016006E8BB5 /* ViewController.swift in Sources */,
 				72B5BE4B245C7016006E8BB5 /* AppDelegate.swift in Sources */,
-				72B5BE4D245C7016006E8BB5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		72B5BE50245C7016006E8BB5 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				72B5BE51245C7016006E8BB5 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		72B5BE55245C7016006E8BB5 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -282,11 +331,13 @@
 		};
 		72B5BE5C245C7016006E8BB5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82C723AE87DA6CD2BAA5B4F1 /* Pods-LotteryForecaster.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R46XFWWPMA;
 				INFOPLIST_FILE = LotteryForecaster/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,11 +351,13 @@
 		};
 		72B5BE5D245C7016006E8BB5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C9900B4A1C50A34117B41993 /* Pods-LotteryForecaster.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R46XFWWPMA;
 				INFOPLIST_FILE = LotteryForecaster/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
