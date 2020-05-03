@@ -3,28 +3,98 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		01F1DB4C0F5C5BBB7705EB2B /* Pods_LotteryForecaster.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CF56F0DD9E6523B18D49DE2 /* Pods_LotteryForecaster.framework */; };
+		720C9F06245EB57E00A05696 /* LotteryForecasterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720C9F05245EB57E00A05696 /* LotteryForecasterUITests.swift */; };
+		720C9F0E245F07D200A05696 /* UICollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720C9F0D245F07D200A05696 /* UICollectionViewExtension.swift */; };
+		720C9F10245F080900A05696 /* UICollectionViewCellExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720C9F0F245F080900A05696 /* UICollectionViewCellExtension.swift */; };
+		720C9F12245F087300A05696 /* BallCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720C9F11245F087300A05696 /* BallCollectionViewCell.swift */; };
 		72B5BE4B245C7016006E8BB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B5BE4A245C7016006E8BB5 /* AppDelegate.swift */; };
 		72B5BE54245C7016006E8BB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72B5BE53245C7016006E8BB5 /* Assets.xcassets */; };
 		72B5BE57245C7016006E8BB5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72B5BE55245C7016006E8BB5 /* LaunchScreen.storyboard */; };
+		72B5BE64245C777C006E8BB5 /* ForecasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B5BE63245C777C006E8BB5 /* ForecasterViewController.swift */; };
+		72B5BE66245C778E006E8BB5 /* ForecasterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B5BE65245C778E006E8BB5 /* ForecasterView.swift */; };
+		72B5BE68245C77BF006E8BB5 /* ForecasterViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B5BE67245C77BF006E8BB5 /* ForecasterViewReactor.swift */; };
+		72B5BE6B245C7875006E8BB5 /* ForecasterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B5BE6A245C7875006E8BB5 /* ForecasterModel.swift */; };
+		72B5BE6E245C8005006E8BB5 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B5BE6D245C8005006E8BB5 /* UIViewExtension.swift */; };
+		72B5BE77245D832A006E8BB5 /* ForecastedLotteryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B5BE76245D832A006E8BB5 /* ForecastedLotteryCell.swift */; };
+		72B5BE7A245D8424006E8BB5 /* UIStackViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B5BE79245D8424006E8BB5 /* UIStackViewExtension.swift */; };
+		72B5BE7F245D86AE006E8BB5 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B5BE7E245D86AE006E8BB5 /* SettingViewController.swift */; };
+		72B5BE82245D86BC006E8BB5 /* SettingViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B5BE81245D86BC006E8BB5 /* SettingViewReactor.swift */; };
+		72B5BE84245D86C4006E8BB5 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B5BE83245D86C4006E8BB5 /* SettingView.swift */; };
+		72B5BE86245D8774006E8BB5 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B5BE85245D8774006E8BB5 /* RootViewController.swift */; };
+		72B5BE88245D8F83006E8BB5 /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B5BE87245D8F83006E8BB5 /* Identifiable.swift */; };
+		72B5BE8A245D9004006E8BB5 /* UITableViewCellExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B5BE89245D9004006E8BB5 /* UITableViewCellExtension.swift */; };
+		72B5BE8C245D90E8006E8BB5 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B5BE8B245D90E8006E8BB5 /* UITableViewExtension.swift */; };
+		72B5BE94245E935D006E8BB5 /* LotteryForecasterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B5BE93245E935D006E8BB5 /* LotteryForecasterTests.swift */; };
+		72B5BE9C245E9634006E8BB5 /* ForecasterViewReactorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B5BE9B245E9634006E8BB5 /* ForecasterViewReactorTests.swift */; };
+		72B5BE9E245E9A5D006E8BB5 /* LotteryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B5BE9D245E9A5D006E8BB5 /* LotteryManager.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		720C9F08245EB57E00A05696 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 72B5BE3F245C7016006E8BB5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 72B5BE46245C7016006E8BB5;
+			remoteInfo = LotteryForecaster;
+		};
+		72B5BE96245E935D006E8BB5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 72B5BE3F245C7016006E8BB5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 72B5BE46245C7016006E8BB5;
+			remoteInfo = LotteryForecaster;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		3CF56F0DD9E6523B18D49DE2 /* Pods_LotteryForecaster.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LotteryForecaster.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		720C9F03245EB57D00A05696 /* LotteryForecasterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LotteryForecasterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		720C9F05245EB57E00A05696 /* LotteryForecasterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteryForecasterUITests.swift; sourceTree = "<group>"; };
+		720C9F07245EB57E00A05696 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		720C9F0D245F07D200A05696 /* UICollectionViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtension.swift; sourceTree = "<group>"; };
+		720C9F0F245F080900A05696 /* UICollectionViewCellExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewCellExtension.swift; sourceTree = "<group>"; };
+		720C9F11245F087300A05696 /* BallCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BallCollectionViewCell.swift; sourceTree = "<group>"; };
 		72B5BE47245C7016006E8BB5 /* LotteryForecaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LotteryForecaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72B5BE4A245C7016006E8BB5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		72B5BE53245C7016006E8BB5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		72B5BE56245C7016006E8BB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		72B5BE58245C7016006E8BB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		72B5BE63245C777C006E8BB5 /* ForecasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecasterViewController.swift; sourceTree = "<group>"; };
+		72B5BE65245C778E006E8BB5 /* ForecasterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecasterView.swift; sourceTree = "<group>"; };
+		72B5BE67245C77BF006E8BB5 /* ForecasterViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecasterViewReactor.swift; sourceTree = "<group>"; };
+		72B5BE6A245C7875006E8BB5 /* ForecasterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecasterModel.swift; sourceTree = "<group>"; };
+		72B5BE6D245C8005006E8BB5 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		72B5BE76245D832A006E8BB5 /* ForecastedLotteryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastedLotteryCell.swift; sourceTree = "<group>"; };
+		72B5BE79245D8424006E8BB5 /* UIStackViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackViewExtension.swift; sourceTree = "<group>"; };
+		72B5BE7E245D86AE006E8BB5 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		72B5BE81245D86BC006E8BB5 /* SettingViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewReactor.swift; sourceTree = "<group>"; };
+		72B5BE83245D86C4006E8BB5 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		72B5BE85245D8774006E8BB5 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		72B5BE87245D8F83006E8BB5 /* Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
+		72B5BE89245D9004006E8BB5 /* UITableViewCellExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCellExtension.swift; sourceTree = "<group>"; };
+		72B5BE8B245D90E8006E8BB5 /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
+		72B5BE91245E935D006E8BB5 /* LotteryForecasterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LotteryForecasterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		72B5BE93245E935D006E8BB5 /* LotteryForecasterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteryForecasterTests.swift; sourceTree = "<group>"; };
+		72B5BE95245E935D006E8BB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		72B5BE9B245E9634006E8BB5 /* ForecasterViewReactorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecasterViewReactorTests.swift; sourceTree = "<group>"; };
+		72B5BE9D245E9A5D006E8BB5 /* LotteryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteryManager.swift; sourceTree = "<group>"; };
 		82C723AE87DA6CD2BAA5B4F1 /* Pods-LotteryForecaster.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LotteryForecaster.debug.xcconfig"; path = "Target Support Files/Pods-LotteryForecaster/Pods-LotteryForecaster.debug.xcconfig"; sourceTree = "<group>"; };
 		C9900B4A1C50A34117B41993 /* Pods-LotteryForecaster.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LotteryForecaster.release.xcconfig"; path = "Target Support Files/Pods-LotteryForecaster/Pods-LotteryForecaster.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		720C9F00245EB57D00A05696 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		72B5BE44245C7016006E8BB5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -33,13 +103,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		72B5BE8E245E935D006E8BB5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		720C9F04245EB57D00A05696 /* LotteryForecasterUITests */ = {
+			isa = PBXGroup;
+			children = (
+				720C9F05245EB57E00A05696 /* LotteryForecasterUITests.swift */,
+				720C9F07245EB57E00A05696 /* Info.plist */,
+			);
+			path = LotteryForecasterUITests;
+			sourceTree = "<group>";
+		};
 		72B5BE3E245C7016006E8BB5 = {
 			isa = PBXGroup;
 			children = (
 				72B5BE49245C7016006E8BB5 /* LotteryForecaster */,
+				72B5BE92245E935D006E8BB5 /* LotteryForecasterTests */,
+				720C9F04245EB57D00A05696 /* LotteryForecasterUITests */,
 				72B5BE48245C7016006E8BB5 /* Products */,
 				76B7B0F59CCBA6C12054B521 /* Pods */,
 				CFF28959108989B6E1B56B88 /* Frameworks */,
@@ -50,6 +138,8 @@
 			isa = PBXGroup;
 			children = (
 				72B5BE47245C7016006E8BB5 /* LotteryForecaster.app */,
+				72B5BE91245E935D006E8BB5 /* LotteryForecasterTests.xctest */,
+				720C9F03245EB57D00A05696 /* LotteryForecasterUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -57,12 +147,120 @@
 		72B5BE49245C7016006E8BB5 /* LotteryForecaster */ = {
 			isa = PBXGroup;
 			children = (
-				72B5BE4A245C7016006E8BB5 /* AppDelegate.swift */,
+				72B5BE73245D82CE006E8BB5 /* Source */,
+				72B5BE5E245C7582006E8BB5 /* Resource */,
+			);
+			path = LotteryForecaster;
+			sourceTree = "<group>";
+		};
+		72B5BE5E245C7582006E8BB5 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
 				72B5BE53245C7016006E8BB5 /* Assets.xcassets */,
 				72B5BE55245C7016006E8BB5 /* LaunchScreen.storyboard */,
 				72B5BE58245C7016006E8BB5 /* Info.plist */,
 			);
-			path = LotteryForecaster;
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		72B5BE5F245C7593006E8BB5 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				72B5BE4A245C7016006E8BB5 /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		72B5BE69245C7862006E8BB5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				72B5BE6A245C7875006E8BB5 /* ForecasterModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		72B5BE6C245C7EA1006E8BB5 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				72B5BE6D245C8005006E8BB5 /* UIViewExtension.swift */,
+				72B5BE79245D8424006E8BB5 /* UIStackViewExtension.swift */,
+				72B5BE87245D8F83006E8BB5 /* Identifiable.swift */,
+				72B5BE89245D9004006E8BB5 /* UITableViewCellExtension.swift */,
+				72B5BE8B245D90E8006E8BB5 /* UITableViewExtension.swift */,
+				720C9F0D245F07D200A05696 /* UICollectionViewExtension.swift */,
+				720C9F0F245F080900A05696 /* UICollectionViewCellExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		72B5BE72245D82A8006E8BB5 /* Forecaster */ = {
+			isa = PBXGroup;
+			children = (
+				72B5BE74245D8308006E8BB5 /* View */,
+				72B5BE67245C77BF006E8BB5 /* ForecasterViewReactor.swift */,
+				72B5BE63245C777C006E8BB5 /* ForecasterViewController.swift */,
+			);
+			path = Forecaster;
+			sourceTree = "<group>";
+		};
+		72B5BE73245D82CE006E8BB5 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				72B5BE5F245C7593006E8BB5 /* Application */,
+				72B5BE72245D82A8006E8BB5 /* Forecaster */,
+				72B5BE7D245D867A006E8BB5 /* Setting */,
+				72B5BE69245C7862006E8BB5 /* Model */,
+				72B5BE78245D8412006E8BB5 /* Helper */,
+				72B5BE85245D8774006E8BB5 /* RootViewController.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		72B5BE74245D8308006E8BB5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				72B5BE65245C778E006E8BB5 /* ForecasterView.swift */,
+				72B5BE76245D832A006E8BB5 /* ForecastedLotteryCell.swift */,
+				720C9F11245F087300A05696 /* BallCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		72B5BE78245D8412006E8BB5 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				72B5BE9F245E9A63006E8BB5 /* Manager */,
+				72B5BE6C245C7EA1006E8BB5 /* Extension */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		72B5BE7D245D867A006E8BB5 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				72B5BE83245D86C4006E8BB5 /* SettingView.swift */,
+				72B5BE81245D86BC006E8BB5 /* SettingViewReactor.swift */,
+				72B5BE7E245D86AE006E8BB5 /* SettingViewController.swift */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		72B5BE92245E935D006E8BB5 /* LotteryForecasterTests */ = {
+			isa = PBXGroup;
+			children = (
+				72B5BE93245E935D006E8BB5 /* LotteryForecasterTests.swift */,
+				72B5BE9B245E9634006E8BB5 /* ForecasterViewReactorTests.swift */,
+				72B5BE95245E935D006E8BB5 /* Info.plist */,
+			);
+			path = LotteryForecasterTests;
+			sourceTree = "<group>";
+		};
+		72B5BE9F245E9A63006E8BB5 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				72B5BE9D245E9A5D006E8BB5 /* LotteryManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 		76B7B0F59CCBA6C12054B521 /* Pods */ = {
@@ -71,7 +269,6 @@
 				82C723AE87DA6CD2BAA5B4F1 /* Pods-LotteryForecaster.debug.xcconfig */,
 				C9900B4A1C50A34117B41993 /* Pods-LotteryForecaster.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -86,6 +283,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		720C9F02245EB57D00A05696 /* LotteryForecasterUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 720C9F0C245EB57E00A05696 /* Build configuration list for PBXNativeTarget "LotteryForecasterUITests" */;
+			buildPhases = (
+				720C9EFF245EB57D00A05696 /* Sources */,
+				720C9F00245EB57D00A05696 /* Frameworks */,
+				720C9F01245EB57D00A05696 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				720C9F09245EB57E00A05696 /* PBXTargetDependency */,
+			);
+			name = LotteryForecasterUITests;
+			productName = LotteryForecasterUITests;
+			productReference = 720C9F03245EB57D00A05696 /* LotteryForecasterUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		72B5BE46245C7016006E8BB5 /* LotteryForecaster */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 72B5BE5B245C7016006E8BB5 /* Build configuration list for PBXNativeTarget "LotteryForecaster" */;
@@ -105,6 +320,24 @@
 			productReference = 72B5BE47245C7016006E8BB5 /* LotteryForecaster.app */;
 			productType = "com.apple.product-type.application";
 		};
+		72B5BE90245E935D006E8BB5 /* LotteryForecasterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 72B5BE98245E935D006E8BB5 /* Build configuration list for PBXNativeTarget "LotteryForecasterTests" */;
+			buildPhases = (
+				72B5BE8D245E935D006E8BB5 /* Sources */,
+				72B5BE8E245E935D006E8BB5 /* Frameworks */,
+				72B5BE8F245E935D006E8BB5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				72B5BE97245E935D006E8BB5 /* PBXTargetDependency */,
+			);
+			name = LotteryForecasterTests;
+			productName = LotteryForecasterTests;
+			productReference = 72B5BE91245E935D006E8BB5 /* LotteryForecasterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -115,8 +348,16 @@
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Soohan Lee";
 				TargetAttributes = {
+					720C9F02245EB57D00A05696 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 72B5BE46245C7016006E8BB5;
+					};
 					72B5BE46245C7016006E8BB5 = {
 						CreatedOnToolsVersion = 11.3.1;
+					};
+					72B5BE90245E935D006E8BB5 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 72B5BE46245C7016006E8BB5;
 					};
 				};
 			};
@@ -134,17 +375,33 @@
 			projectRoot = "";
 			targets = (
 				72B5BE46245C7016006E8BB5 /* LotteryForecaster */,
+				72B5BE90245E935D006E8BB5 /* LotteryForecasterTests */,
+				720C9F02245EB57D00A05696 /* LotteryForecasterUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		720C9F01245EB57D00A05696 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		72B5BE45245C7016006E8BB5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				72B5BE57245C7016006E8BB5 /* LaunchScreen.storyboard in Resources */,
 				72B5BE54245C7016006E8BB5 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		72B5BE8F245E935D006E8BB5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,15 +450,63 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		720C9EFF245EB57D00A05696 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				720C9F06245EB57E00A05696 /* LotteryForecasterUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		72B5BE43245C7016006E8BB5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72B5BE82245D86BC006E8BB5 /* SettingViewReactor.swift in Sources */,
+				72B5BE6E245C8005006E8BB5 /* UIViewExtension.swift in Sources */,
+				72B5BE86245D8774006E8BB5 /* RootViewController.swift in Sources */,
+				72B5BE7A245D8424006E8BB5 /* UIStackViewExtension.swift in Sources */,
+				720C9F12245F087300A05696 /* BallCollectionViewCell.swift in Sources */,
+				72B5BE64245C777C006E8BB5 /* ForecasterViewController.swift in Sources */,
+				72B5BE6B245C7875006E8BB5 /* ForecasterModel.swift in Sources */,
+				72B5BE8C245D90E8006E8BB5 /* UITableViewExtension.swift in Sources */,
+				72B5BE88245D8F83006E8BB5 /* Identifiable.swift in Sources */,
+				720C9F0E245F07D200A05696 /* UICollectionViewExtension.swift in Sources */,
+				72B5BE77245D832A006E8BB5 /* ForecastedLotteryCell.swift in Sources */,
+				72B5BE7F245D86AE006E8BB5 /* SettingViewController.swift in Sources */,
+				72B5BE66245C778E006E8BB5 /* ForecasterView.swift in Sources */,
 				72B5BE4B245C7016006E8BB5 /* AppDelegate.swift in Sources */,
+				72B5BE8A245D9004006E8BB5 /* UITableViewCellExtension.swift in Sources */,
+				720C9F10245F080900A05696 /* UICollectionViewCellExtension.swift in Sources */,
+				72B5BE9E245E9A5D006E8BB5 /* LotteryManager.swift in Sources */,
+				72B5BE68245C77BF006E8BB5 /* ForecasterViewReactor.swift in Sources */,
+				72B5BE84245D86C4006E8BB5 /* SettingView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		72B5BE8D245E935D006E8BB5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72B5BE94245E935D006E8BB5 /* LotteryForecasterTests.swift in Sources */,
+				72B5BE9C245E9634006E8BB5 /* ForecasterViewReactorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		720C9F09245EB57E00A05696 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 72B5BE46245C7016006E8BB5 /* LotteryForecaster */;
+			targetProxy = 720C9F08245EB57E00A05696 /* PBXContainerItemProxy */;
+		};
+		72B5BE97245E935D006E8BB5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 72B5BE46245C7016006E8BB5 /* LotteryForecaster */;
+			targetProxy = 72B5BE96245E935D006E8BB5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		72B5BE55245C7016006E8BB5 /* LaunchScreen.storyboard */ = {
@@ -215,6 +520,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		720C9F0A245EB57E00A05696 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R46XFWWPMA;
+				INFOPLIST_FILE = LotteryForecasterUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.soohan.LotteryForecasterUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LotteryForecaster;
+			};
+			name = Debug;
+		};
+		720C9F0B245EB57E00A05696 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R46XFWWPMA;
+				INFOPLIST_FILE = LotteryForecasterUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.soohan.LotteryForecasterUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LotteryForecaster;
+			};
+			name = Release;
+		};
 		72B5BE59245C7016006E8BB5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -336,8 +679,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R46XFWWPMA;
-				INFOPLIST_FILE = LotteryForecaster/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				INFOPLIST_FILE = LotteryForecaster/Resource/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -356,8 +699,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R46XFWWPMA;
-				INFOPLIST_FILE = LotteryForecaster/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				INFOPLIST_FILE = LotteryForecaster/Resource/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -369,9 +712,58 @@
 			};
 			name = Release;
 		};
+		72B5BE99245E935D006E8BB5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R46XFWWPMA;
+				INFOPLIST_FILE = LotteryForecasterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.soohan.LotteryForecasterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LotteryForecaster.app/LotteryForecaster";
+			};
+			name = Debug;
+		};
+		72B5BE9A245E935D006E8BB5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R46XFWWPMA;
+				INFOPLIST_FILE = LotteryForecasterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.soohan.LotteryForecasterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LotteryForecaster.app/LotteryForecaster";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		720C9F0C245EB57E00A05696 /* Build configuration list for PBXNativeTarget "LotteryForecasterUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				720C9F0A245EB57E00A05696 /* Debug */,
+				720C9F0B245EB57E00A05696 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		72B5BE42245C7016006E8BB5 /* Build configuration list for PBXProject "LotteryForecaster" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -386,6 +778,15 @@
 			buildConfigurations = (
 				72B5BE5C245C7016006E8BB5 /* Debug */,
 				72B5BE5D245C7016006E8BB5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		72B5BE98245E935D006E8BB5 /* Build configuration list for PBXNativeTarget "LotteryForecasterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				72B5BE99245E935D006E8BB5 /* Debug */,
+				72B5BE9A245E935D006E8BB5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
