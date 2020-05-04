@@ -36,20 +36,10 @@ final class ForecasterViewReactor: Reactor {
   func mutate(action: Action) -> Observable<Mutation> {
     switch action {
     case .forecast:
-      return forecastLottery()
+      let forecastedLottery = LotteryManager.shared.makeRandomNumbers(highestNumber: 45, lotteryCount: 6)
+      
+      return Observable.just(.setLottery(forecastedLottery))
     }
-  }
-  
-  private func forecastLottery() -> Observable<Mutation> {
-    let highestNumber = 45
-    let lotteryCount = 6
-    
-    let forecastedLottery = Array(1...highestNumber)
-      .shuffled()
-      .dropLast(highestNumber - lotteryCount)
-      .sorted()
-    
-    return Observable.just(.setLottery(forecastedLottery))
   }
   
   // MARK: - Reduct

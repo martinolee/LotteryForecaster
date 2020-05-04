@@ -9,7 +9,7 @@
 import Foundation
 
 class LotteryManager {
-  let shared = LotteryManager()
+  static let shared = LotteryManager()
   
   func makeRandomNumbers(highestNumber: Int, lotteryCount: Int) -> [Int] {
     let forecastedLottery = Array(1...highestNumber)

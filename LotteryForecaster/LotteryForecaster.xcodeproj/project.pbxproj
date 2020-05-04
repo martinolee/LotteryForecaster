@@ -12,6 +12,12 @@
 		720C9F0E245F07D200A05696 /* UICollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720C9F0D245F07D200A05696 /* UICollectionViewExtension.swift */; };
 		720C9F10245F080900A05696 /* UICollectionViewCellExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720C9F0F245F080900A05696 /* UICollectionViewCellExtension.swift */; };
 		720C9F12245F087300A05696 /* BallCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720C9F11245F087300A05696 /* BallCollectionViewCell.swift */; };
+		721A8105245FCDC60051568E /* Ball.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721A8104245FCDC60051568E /* Ball.swift */; };
+		721A8107245FCE930051568E /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721A8106245FCE930051568E /* UIColorExtension.swift */; };
+		72640F7724600D7800D5B565 /* Pods-LotteryForecaster-acknowledgements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 72640F7624600D7800D5B565 /* Pods-LotteryForecaster-acknowledgements.plist */; };
+		72640F7924600F8200D5B565 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72640F7824600F8200D5B565 /* Setting.swift */; };
+		72640F7F24601A9800D5B565 /* RatingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72640F7E24601A9800D5B565 /* RatingManager.swift */; };
+		72640F8124601B7100D5B565 /* EmailManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72640F8024601B7100D5B565 /* EmailManager.swift */; };
 		72B5BE4B245C7016006E8BB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B5BE4A245C7016006E8BB5 /* AppDelegate.swift */; };
 		72B5BE54245C7016006E8BB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72B5BE53245C7016006E8BB5 /* Assets.xcassets */; };
 		72B5BE57245C7016006E8BB5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72B5BE55245C7016006E8BB5 /* LaunchScreen.storyboard */; };
@@ -59,6 +65,12 @@
 		720C9F0D245F07D200A05696 /* UICollectionViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtension.swift; sourceTree = "<group>"; };
 		720C9F0F245F080900A05696 /* UICollectionViewCellExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewCellExtension.swift; sourceTree = "<group>"; };
 		720C9F11245F087300A05696 /* BallCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BallCollectionViewCell.swift; sourceTree = "<group>"; };
+		721A8104245FCDC60051568E /* Ball.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ball.swift; sourceTree = "<group>"; };
+		721A8106245FCE930051568E /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		72640F7624600D7800D5B565 /* Pods-LotteryForecaster-acknowledgements.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = "Pods-LotteryForecaster-acknowledgements.plist"; path = "Pods/Target Support Files/Pods-LotteryForecaster/Pods-LotteryForecaster-acknowledgements.plist"; sourceTree = SOURCE_ROOT; };
+		72640F7824600F8200D5B565 /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
+		72640F7E24601A9800D5B565 /* RatingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingManager.swift; sourceTree = "<group>"; };
+		72640F8024601B7100D5B565 /* EmailManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailManager.swift; sourceTree = "<group>"; };
 		72B5BE47245C7016006E8BB5 /* LotteryForecaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LotteryForecaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72B5BE4A245C7016006E8BB5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		72B5BE53245C7016006E8BB5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -122,6 +134,15 @@
 			path = LotteryForecasterUITests;
 			sourceTree = "<group>";
 		};
+		72640F7524600C4300D5B565 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				72640F7624600D7800D5B565 /* Pods-LotteryForecaster-acknowledgements.plist */,
+				72B5BE58245C7016006E8BB5 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		72B5BE3E245C7016006E8BB5 = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +170,7 @@
 			children = (
 				72B5BE73245D82CE006E8BB5 /* Source */,
 				72B5BE5E245C7582006E8BB5 /* Resource */,
+				72640F7524600C4300D5B565 /* Supporting Files */,
 			);
 			path = LotteryForecaster;
 			sourceTree = "<group>";
@@ -158,7 +180,6 @@
 			children = (
 				72B5BE53245C7016006E8BB5 /* Assets.xcassets */,
 				72B5BE55245C7016006E8BB5 /* LaunchScreen.storyboard */,
-				72B5BE58245C7016006E8BB5 /* Info.plist */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -175,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				72B5BE6A245C7875006E8BB5 /* ForecasterModel.swift */,
+				72640F7824600F8200D5B565 /* Setting.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -189,6 +211,7 @@
 				72B5BE8B245D90E8006E8BB5 /* UITableViewExtension.swift */,
 				720C9F0D245F07D200A05696 /* UICollectionViewExtension.swift */,
 				720C9F0F245F080900A05696 /* UICollectionViewCellExtension.swift */,
+				721A8106245FCE930051568E /* UIColorExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -210,7 +233,8 @@
 				72B5BE72245D82A8006E8BB5 /* Forecaster */,
 				72B5BE7D245D867A006E8BB5 /* Setting */,
 				72B5BE69245C7862006E8BB5 /* Model */,
-				72B5BE78245D8412006E8BB5 /* Helper */,
+				72B5BE9F245E9A63006E8BB5 /* Manager */,
+				72B5BE6C245C7EA1006E8BB5 /* Extension */,
 				72B5BE85245D8774006E8BB5 /* RootViewController.swift */,
 			);
 			path = Source;
@@ -224,15 +248,6 @@
 				720C9F11245F087300A05696 /* BallCollectionViewCell.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		72B5BE78245D8412006E8BB5 /* Helper */ = {
-			isa = PBXGroup;
-			children = (
-				72B5BE9F245E9A63006E8BB5 /* Manager */,
-				72B5BE6C245C7EA1006E8BB5 /* Extension */,
-			);
-			path = Helper;
 			sourceTree = "<group>";
 		};
 		72B5BE7D245D867A006E8BB5 /* Setting */ = {
@@ -259,6 +274,9 @@
 			isa = PBXGroup;
 			children = (
 				72B5BE9D245E9A5D006E8BB5 /* LotteryManager.swift */,
+				721A8104245FCDC60051568E /* Ball.swift */,
+				72640F7E24601A9800D5B565 /* RatingManager.swift */,
+				72640F8024601B7100D5B565 /* EmailManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -395,6 +413,7 @@
 			files = (
 				72B5BE57245C7016006E8BB5 /* LaunchScreen.storyboard in Resources */,
 				72B5BE54245C7016006E8BB5 /* Assets.xcassets in Resources */,
+				72640F7724600D7800D5B565 /* Pods-LotteryForecaster-acknowledgements.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,22 +483,27 @@
 			files = (
 				72B5BE82245D86BC006E8BB5 /* SettingViewReactor.swift in Sources */,
 				72B5BE6E245C8005006E8BB5 /* UIViewExtension.swift in Sources */,
+				721A8105245FCDC60051568E /* Ball.swift in Sources */,
 				72B5BE86245D8774006E8BB5 /* RootViewController.swift in Sources */,
 				72B5BE7A245D8424006E8BB5 /* UIStackViewExtension.swift in Sources */,
 				720C9F12245F087300A05696 /* BallCollectionViewCell.swift in Sources */,
+				72640F7924600F8200D5B565 /* Setting.swift in Sources */,
 				72B5BE64245C777C006E8BB5 /* ForecasterViewController.swift in Sources */,
 				72B5BE6B245C7875006E8BB5 /* ForecasterModel.swift in Sources */,
+				721A8107245FCE930051568E /* UIColorExtension.swift in Sources */,
 				72B5BE8C245D90E8006E8BB5 /* UITableViewExtension.swift in Sources */,
 				72B5BE88245D8F83006E8BB5 /* Identifiable.swift in Sources */,
 				720C9F0E245F07D200A05696 /* UICollectionViewExtension.swift in Sources */,
 				72B5BE77245D832A006E8BB5 /* ForecastedLotteryCell.swift in Sources */,
 				72B5BE7F245D86AE006E8BB5 /* SettingViewController.swift in Sources */,
 				72B5BE66245C778E006E8BB5 /* ForecasterView.swift in Sources */,
+				72640F8124601B7100D5B565 /* EmailManager.swift in Sources */,
 				72B5BE4B245C7016006E8BB5 /* AppDelegate.swift in Sources */,
 				72B5BE8A245D9004006E8BB5 /* UITableViewCellExtension.swift in Sources */,
 				720C9F10245F080900A05696 /* UICollectionViewCellExtension.swift in Sources */,
 				72B5BE9E245E9A5D006E8BB5 /* LotteryManager.swift in Sources */,
 				72B5BE68245C77BF006E8BB5 /* ForecasterViewReactor.swift in Sources */,
+				72640F7F24601A9800D5B565 /* RatingManager.swift in Sources */,
 				72B5BE84245D86C4006E8BB5 /* SettingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -608,7 +632,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -662,7 +686,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -679,7 +703,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R46XFWWPMA;
-				INFOPLIST_FILE = LotteryForecaster/Resource/Info.plist;
+				INFOPLIST_FILE = "LotteryForecaster/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -699,7 +723,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R46XFWWPMA;
-				INFOPLIST_FILE = LotteryForecaster/Resource/Info.plist;
+				INFOPLIST_FILE = "LotteryForecaster/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

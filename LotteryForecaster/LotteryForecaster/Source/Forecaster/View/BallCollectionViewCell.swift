@@ -13,7 +13,10 @@ class BallCollectionViewCell: UICollectionViewCell {
   
   private lazy var numberLabel = UILabel().then {
     $0.clipsToBounds = true
-    $0.font = .systemFont(ofSize: 24, weight: .light)
+    $0.font = .systemFont(ofSize: 28, weight: .bold)
+    $0.textAlignment = .center
+    $0.textColor = .white
+    $0.text = "?"
   }
   
   // MARK - Life Cycle
@@ -24,16 +27,23 @@ class BallCollectionViewCell: UICollectionViewCell {
     setUpAttribute()
     addAllSubviews()
     setUpAutoLayout()
+    makeCircleLabel()
   }
   
   required init?(coder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
   }
   
+  override func layoutSubviews() {
+    super.layoutSubviews()
+    
+    makeCircleLabel()
+  }
+  
   // MARK - SetUp UI
   
   private func setUpAttribute() {
-    
+    self.backgroundColor = .systemBackground
   }
   
   private func addAllSubviews() {
@@ -42,13 +52,19 @@ class BallCollectionViewCell: UICollectionViewCell {
   
   private func setUpAutoLayout() {
     numberLabel.snp.makeConstraints {
-      $0.edges.equalToSuperview()
+      $0.edges.equalToSuperview().inset(32)
     }
+  }
+  
+  private func makeCircleLabel() {
+    numberLabel.layer.cornerRadius = numberLabel.frame.width / 2
   }
   
   // MARK: - Element Control
   
   func configure(number: Int) {
     numberLabel.text = "\(number)"
+    
+    numberLabel.backgroundColor = Ball.number(number).color
   }
 }

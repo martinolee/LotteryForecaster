@@ -7,10 +7,14 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 import SnapKit
 
 final class ForecasterViewController: UIViewController {
   // MARK: - Properties
+  
+  private let disposeBag = DisposeBag()
   
   private let forecasterView = ForecasterView()
   
@@ -20,6 +24,7 @@ final class ForecasterViewController: UIViewController {
     super.viewDidLoad()
     
     setUpRootView()
+    setUpNavigationItem()
   }
   
   private func setUpRootView() {
@@ -32,4 +37,19 @@ final class ForecasterViewController: UIViewController {
     }
   }
   
+  private func setUpNavigationItem() {
+    let cameraButton = UIButton(type: .system).then {
+      $0.setImage(UIImage(systemName: "camera"), for: .normal)
+    }
+    
+    cameraButton.rx.tap
+      .bind { [weak self] in
+        guard let self = self else { return }
+        
+        self.present(UIViewController(), animated: true)
+    }
+    .disposed(by: disposeBag)
+    
+    navigationItem.leftBarButtonItem = UIBarButtonItem(customView: cameraButton)
+  }
 }
