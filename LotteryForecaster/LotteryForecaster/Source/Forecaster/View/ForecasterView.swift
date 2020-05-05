@@ -36,7 +36,7 @@ final class ForecasterView: UIView, View {
     $0.setTitle("Forecast", for: .normal)
   }
   
-  private lazy var forecastedLotteryTableView = UITableView().then {
+  private lazy var forecastHistoryTableView = UITableView().then {
     $0.tableFooterView = UIView()
     
     $0.register(cell: ForecastedLotteryCell.self)
@@ -73,6 +73,15 @@ final class ForecasterView: UIView, View {
   func bind(reactor: ForecasterViewReactor) {
     // MARK: - Action
     
+    forecastHistoryTableView.rx
+      .itemSelected
+      .bind { [weak self] indexPath in
+        guard let self = self else { return }
+        
+        self.forecastHistoryTableView.deselectRow(at: indexPath, animated: true)
+    }
+    .disposed(by: disposeBag)
+    
     forecastButton.rx.tap
       .map { Reactor.Action.forecast }
       .bind(to: reactor.action)
@@ -91,7 +100,7 @@ final class ForecasterView: UIView, View {
     
     reactor.state
       .map { $0.lotteryHistory }
-      .bind(to: forecastedLotteryTableView.rx.items(cellIdentifier: ForecastedLotteryCell.identifier)) { indexPath, numbers, cell in
+      .bind(to: forecastHistoryTableView.rx.items(cellIdentifier: ForecastedLotteryCell.identifier)) { indexPath, numbers, cell in
         guard let cell = cell as? ForecastedLotteryCell else { return }
         
         cell.configure(numbers: numbers)
@@ -108,7 +117,7 @@ final class ForecasterView: UIView, View {
   private func addAllSubviews() {
     self.addSubviews([
       ballsCollectionView,
-      forecastedLotteryTableView,
+      forecastHistoryTableView,
       forecastButton,
     ])
   }
@@ -125,7 +134,7 @@ final class ForecasterView: UIView, View {
       $0.centerX.equalTo(ballsCollectionView)
     }
     
-    forecastedLotteryTableView.snp.makeConstraints {
+    forecastHistoryTableView.snp.makeConstraints {
       $0.top.equalTo(forecastButton.snp.bottom).offset(32)
       $0.leading.bottom.trailing.equalToSuperview()
     }

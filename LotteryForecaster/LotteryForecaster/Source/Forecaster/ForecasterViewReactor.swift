@@ -36,6 +36,8 @@ final class ForecasterViewReactor: Reactor {
   func mutate(action: Action) -> Observable<Mutation> {
     switch action {
     case .forecast:
+      AnalyticsManager.shared.makeLogEvent(.forecast)
+      
       let forecastedLottery = LotteryManager.shared.makeRandomNumbers(highestNumber: 45, lotteryCount: 6)
       
       return Observable.just(.setLottery(forecastedLottery))

@@ -47,42 +47,33 @@ class SettingViewController: UIViewController {
   
   private func bind() {
     settingView.settingTableView.rx.itemSelected
-      .subscribe({ [weak self] indexPath in
+      .bind { [weak self] indexPath in
         guard let self = self, let navigationController = self.navigationController else { return }
         
-        switch indexPath {
-        case .next(let indexPath):
-          switch indexPath.row {
-          case Setting.license.id:
-            let viewController = AcknowListViewController()
-            
-            navigationController.pushViewController(viewController, animated: true)
-            
-          case Setting.version.id:
-            print("version")
-            
-          case Setting.rate.id:
-            print("rate")
-            
-          case Setting.email.id:
-            let developerEmail = "soohan.m.lee@gmail.com"
-            let emailViewController = EmailManager.shared.getEmailComposeView(for: developerEmail)
-            
-            if MFMailComposeViewController.canSendMail() {
-              self.present(emailViewController, animated: true)
-            }
-          default:
-            break
+        switch indexPath.row {
+        case Setting.license.id:
+          let viewController = AcknowListViewController(fileNamed: "Pods-LotteryForecaster-acknowledgements")
+          
+          navigationController.pushViewController(viewController, animated: true)
+          
+        case Setting.version.id:
+          print("version")
+          
+        case Setting.rate.id:
+          print("rate")
+          
+        case Setting.email.id:
+          let developerEmail = "soohan.m.lee@gmail.com"
+          let emailViewController = EmailManager.shared.getEmailComposeView(for: developerEmail)
+          
+          if MFMailComposeViewController.canSendMail() {
+            self.present(emailViewController, animated: true)
           }
-          
-        case .error(let error):
-          print(error.localizedDescription)
-          
-        case .completed:
-          print("completed")
+        default:
+          break
         }
-      })
-      .disposed(by: disposeBag)
+    }
+    .disposed(by: disposeBag)
   }
   
   private func deselectRow(_ animated: Bool) {

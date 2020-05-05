@@ -14,10 +14,11 @@
 		720C9F12245F087300A05696 /* BallCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720C9F11245F087300A05696 /* BallCollectionViewCell.swift */; };
 		721A8105245FCDC60051568E /* Ball.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721A8104245FCDC60051568E /* Ball.swift */; };
 		721A8107245FCE930051568E /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721A8106245FCE930051568E /* UIColorExtension.swift */; };
-		72640F7724600D7800D5B565 /* Pods-LotteryForecaster-acknowledgements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 72640F7624600D7800D5B565 /* Pods-LotteryForecaster-acknowledgements.plist */; };
 		72640F7924600F8200D5B565 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72640F7824600F8200D5B565 /* Setting.swift */; };
 		72640F7F24601A9800D5B565 /* RatingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72640F7E24601A9800D5B565 /* RatingManager.swift */; };
 		72640F8124601B7100D5B565 /* EmailManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72640F8024601B7100D5B565 /* EmailManager.swift */; };
+		729A1687246107EF00625196 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 729A1686246107EF00625196 /* GoogleService-Info.plist */; };
+		729A1689246112D700625196 /* AnalyticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729A1688246112D700625196 /* AnalyticsManager.swift */; };
 		72B5BE4B245C7016006E8BB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B5BE4A245C7016006E8BB5 /* AppDelegate.swift */; };
 		72B5BE54245C7016006E8BB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72B5BE53245C7016006E8BB5 /* Assets.xcassets */; };
 		72B5BE57245C7016006E8BB5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72B5BE55245C7016006E8BB5 /* LaunchScreen.storyboard */; };
@@ -67,11 +68,13 @@
 		720C9F11245F087300A05696 /* BallCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BallCollectionViewCell.swift; sourceTree = "<group>"; };
 		721A8104245FCDC60051568E /* Ball.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ball.swift; sourceTree = "<group>"; };
 		721A8106245FCE930051568E /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
-		72640F7624600D7800D5B565 /* Pods-LotteryForecaster-acknowledgements.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = "Pods-LotteryForecaster-acknowledgements.plist"; path = "Pods/Target Support Files/Pods-LotteryForecaster/Pods-LotteryForecaster-acknowledgements.plist"; sourceTree = SOURCE_ROOT; };
 		72640F7824600F8200D5B565 /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
 		72640F7E24601A9800D5B565 /* RatingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingManager.swift; sourceTree = "<group>"; };
 		72640F8024601B7100D5B565 /* EmailManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailManager.swift; sourceTree = "<group>"; };
-		72B5BE47245C7016006E8BB5 /* LotteryForecaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LotteryForecaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		729A1686246107EF00625196 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		729A1688246112D700625196 /* AnalyticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsManager.swift; sourceTree = "<group>"; };
+		729A168A24611A3A00625196 /* Pods-LotteryForecaster-acknowledgements.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Pods-LotteryForecaster-acknowledgements.plist"; path = "../../Pods/Target Support Files/Pods-LotteryForecaster/Pods-LotteryForecaster-acknowledgements.plist"; sourceTree = "<group>"; };
+		72B5BE47245C7016006E8BB5 /* Lottery Forecaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lottery Forecaster.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		72B5BE4A245C7016006E8BB5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		72B5BE53245C7016006E8BB5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		72B5BE56245C7016006E8BB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -137,7 +140,8 @@
 		72640F7524600C4300D5B565 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				72640F7624600D7800D5B565 /* Pods-LotteryForecaster-acknowledgements.plist */,
+				729A168A24611A3A00625196 /* Pods-LotteryForecaster-acknowledgements.plist */,
+				729A1686246107EF00625196 /* GoogleService-Info.plist */,
 				72B5BE58245C7016006E8BB5 /* Info.plist */,
 			);
 			path = "Supporting Files";
@@ -158,7 +162,7 @@
 		72B5BE48245C7016006E8BB5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				72B5BE47245C7016006E8BB5 /* LotteryForecaster.app */,
+				72B5BE47245C7016006E8BB5 /* Lottery Forecaster.app */,
 				72B5BE91245E935D006E8BB5 /* LotteryForecasterTests.xctest */,
 				720C9F03245EB57D00A05696 /* LotteryForecasterUITests.xctest */,
 			);
@@ -277,6 +281,7 @@
 				721A8104245FCDC60051568E /* Ball.swift */,
 				72640F7E24601A9800D5B565 /* RatingManager.swift */,
 				72640F8024601B7100D5B565 /* EmailManager.swift */,
+				729A1688246112D700625196 /* AnalyticsManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -335,7 +340,7 @@
 			);
 			name = LotteryForecaster;
 			productName = LotteryForecaster;
-			productReference = 72B5BE47245C7016006E8BB5 /* LotteryForecaster.app */;
+			productReference = 72B5BE47245C7016006E8BB5 /* Lottery Forecaster.app */;
 			productType = "com.apple.product-type.application";
 		};
 		72B5BE90245E935D006E8BB5 /* LotteryForecasterTests */ = {
@@ -412,8 +417,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				72B5BE57245C7016006E8BB5 /* LaunchScreen.storyboard in Resources */,
+				729A1687246107EF00625196 /* GoogleService-Info.plist in Resources */,
 				72B5BE54245C7016006E8BB5 /* Assets.xcassets in Resources */,
-				72640F7724600D7800D5B565 /* Pods-LotteryForecaster-acknowledgements.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,6 +503,7 @@
 				72B5BE7F245D86AE006E8BB5 /* SettingViewController.swift in Sources */,
 				72B5BE66245C778E006E8BB5 /* ForecasterView.swift in Sources */,
 				72640F8124601B7100D5B565 /* EmailManager.swift in Sources */,
+				729A1689246112D700625196 /* AnalyticsManager.swift in Sources */,
 				72B5BE4B245C7016006E8BB5 /* AppDelegate.swift in Sources */,
 				72B5BE8A245D9004006E8BB5 /* UITableViewCellExtension.swift in Sources */,
 				720C9F10245F080900A05696 /* UICollectionViewCellExtension.swift in Sources */,
@@ -710,7 +716,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.soohan.LotteryForecaster;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Lottery Forecaster";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -730,7 +736,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.soohan.LotteryForecaster;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Lottery Forecaster";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
