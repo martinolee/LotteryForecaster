@@ -19,6 +19,8 @@
 		72640F8124601B7100D5B565 /* EmailManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72640F8024601B7100D5B565 /* EmailManager.swift */; };
 		729A1687246107EF00625196 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 729A1686246107EF00625196 /* GoogleService-Info.plist */; };
 		729A1689246112D700625196 /* AnalyticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729A1688246112D700625196 /* AnalyticsManager.swift */; };
+		729A168D24611D0B00625196 /* Pods-LotteryForecaster-acknowledgements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 729A168A24611A3A00625196 /* Pods-LotteryForecaster-acknowledgements.plist */; };
+		729A1691246139FB00625196 /* VersionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729A1690246139FB00625196 /* VersionTableViewCell.swift */; };
 		72B5BE4B245C7016006E8BB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B5BE4A245C7016006E8BB5 /* AppDelegate.swift */; };
 		72B5BE54245C7016006E8BB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72B5BE53245C7016006E8BB5 /* Assets.xcassets */; };
 		72B5BE57245C7016006E8BB5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72B5BE55245C7016006E8BB5 /* LaunchScreen.storyboard */; };
@@ -74,6 +76,7 @@
 		729A1686246107EF00625196 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		729A1688246112D700625196 /* AnalyticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsManager.swift; sourceTree = "<group>"; };
 		729A168A24611A3A00625196 /* Pods-LotteryForecaster-acknowledgements.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Pods-LotteryForecaster-acknowledgements.plist"; path = "../../Pods/Target Support Files/Pods-LotteryForecaster/Pods-LotteryForecaster-acknowledgements.plist"; sourceTree = "<group>"; };
+		729A1690246139FB00625196 /* VersionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionTableViewCell.swift; sourceTree = "<group>"; };
 		72B5BE47245C7016006E8BB5 /* Lottery Forecaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lottery Forecaster.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		72B5BE4A245C7016006E8BB5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		72B5BE53245C7016006E8BB5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -145,6 +148,15 @@
 				72B5BE58245C7016006E8BB5 /* Info.plist */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		729A169224613A9700625196 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				72B5BE83245D86C4006E8BB5 /* SettingView.swift */,
+				729A1690246139FB00625196 /* VersionTableViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		72B5BE3E245C7016006E8BB5 = {
@@ -257,7 +269,7 @@
 		72B5BE7D245D867A006E8BB5 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
-				72B5BE83245D86C4006E8BB5 /* SettingView.swift */,
+				729A169224613A9700625196 /* View */,
 				72B5BE81245D86BC006E8BB5 /* SettingViewReactor.swift */,
 				72B5BE7E245D86AE006E8BB5 /* SettingViewController.swift */,
 			);
@@ -419,6 +431,7 @@
 				72B5BE57245C7016006E8BB5 /* LaunchScreen.storyboard in Resources */,
 				729A1687246107EF00625196 /* GoogleService-Info.plist in Resources */,
 				72B5BE54245C7016006E8BB5 /* Assets.xcassets in Resources */,
+				729A168D24611D0B00625196 /* Pods-LotteryForecaster-acknowledgements.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -494,6 +507,7 @@
 				720C9F12245F087300A05696 /* BallCollectionViewCell.swift in Sources */,
 				72640F7924600F8200D5B565 /* Setting.swift in Sources */,
 				72B5BE64245C777C006E8BB5 /* ForecasterViewController.swift in Sources */,
+				729A1691246139FB00625196 /* VersionTableViewCell.swift in Sources */,
 				72B5BE6B245C7875006E8BB5 /* ForecasterModel.swift in Sources */,
 				721A8107245FCE930051568E /* UIColorExtension.swift in Sources */,
 				72B5BE8C245D90E8006E8BB5 /* UITableViewExtension.swift in Sources */,

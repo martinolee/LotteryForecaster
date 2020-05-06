@@ -14,5 +14,5 @@ target 'LotteryForecaster' do
   pod 'Then'
   pod 'AcknowList'
   pod 'Firebase/Analytics'
-
+  pod 'Firebase/RemoteConfig'
 end
