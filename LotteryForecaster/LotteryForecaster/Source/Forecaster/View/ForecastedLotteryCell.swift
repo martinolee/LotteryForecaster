@@ -11,8 +11,15 @@ import UIKit
 class ForecastedLotteryCell: UITableViewCell {
   // MARK: - Properties
   
-  enum UI: CGFloat {
-    case width = 30
+  enum UI {
+    case width
+    
+    var cgFloat: CGFloat {
+      switch self {
+      case .width:
+        return 30
+      }
+    }
   }
   
   private let forecastedBallsStackView = UIStackView().then {
@@ -23,7 +30,8 @@ class ForecastedLotteryCell: UITableViewCell {
     $0.addArrangedSubviews([UILabel(), UILabel(), UILabel(), UILabel(), UILabel(), UILabel()])
     
     guard let labels = $0.arrangedSubviews as? [UILabel] else { return }
-    let width = UI.width.rawValue
+    let width = UI.width.cgFloat
+    
     labels.forEach {
       $0.do { label in
         label.textAlignment = .center

@@ -27,12 +27,6 @@ class SettingViewController: UIViewController {
     bind()
   }
   
-  override func viewDidAppear(_ animated: Bool) {
-    super.viewWillAppear(animated)
-    
-    deselectRow(animated)
-  }
-  
   private func setUpRootView() {
     settingView.reactor = SettingViewReactor()
     
@@ -49,6 +43,7 @@ class SettingViewController: UIViewController {
     settingView.settingTableView.rx.itemSelected
       .bind { [weak self] indexPath in
         guard let self = self, let navigationController = self.navigationController else { return }
+        self.settingView.settingTableView.deselectRow(at: indexPath, animated: true)
         
         switch indexPath.row {
         case Setting.license.id:
@@ -60,11 +55,12 @@ class SettingViewController: UIViewController {
           print("version")
           
         case Setting.rate.id:
-          print("rate")
+          RatingManager.shared.rateThisApp()
           
         case Setting.email.id:
           let developerEmail = "soohan.m.lee@gmail.com"
           let emailViewController = EmailManager.shared.getEmailComposeView(for: developerEmail)
+          emailViewController.mailComposeDelegate = self
           
           if MFMailComposeViewController.canSendMail() {
             self.present(emailViewController, animated: true)
@@ -75,10 +71,10 @@ class SettingViewController: UIViewController {
     }
     .disposed(by: disposeBag)
   }
-  
-  private func deselectRow(_ animated: Bool) {
-    if let indexPath = settingView.settingTableView.indexPathForSelectedRow {
-      settingView.settingTableView.deselectRow(at: indexPath, animated: animated)
-    }
+}
+
+extension SettingViewController: MFMailComposeViewControllerDelegate {
+  func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+    controller.dismiss(animated: true)
   }
 }

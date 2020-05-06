@@ -16,7 +16,7 @@ extension Setting {
   var title: String {
     switch self {
     case .license:
-      return "License"
+      return "Open Source License"
     case .version:
       return "Version"
     case .rate:

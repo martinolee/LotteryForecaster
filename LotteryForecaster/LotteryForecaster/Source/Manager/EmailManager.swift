@@ -30,12 +30,12 @@ class EmailManager {
   
   func getEmailComposeView(for developerEmail: String) -> MFMailComposeViewController {
     let userSystemVersion = UIDevice.current.systemVersion
-    let userAppVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
+    guard let userAppVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String else { fatalError() }
     
     let mailComposeViewController = self.configuredMailComposeViewController(
       emailAddress: developerEmail,
       systemVersion: userSystemVersion,
-      appVersion: userAppVersion!
+      appVersion: userAppVersion
     )
     
     return mailComposeViewController

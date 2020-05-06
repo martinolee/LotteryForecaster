@@ -13,13 +13,7 @@ class RatingManager {
   static let shared = RatingManager()
   
   func rateThisApp() {
-    if #available(iOS 10.3, *) {
-      SKStoreReviewController.requestReview()
-    } else {
-      guard let rateGitGetUrl = URL(string: "") else { return }
-      UIApplication.shared.open(rateGitGetUrl)
-      UIApplication.shared.canOpenURL(rateGitGetUrl)
-    }
+    SKStoreReviewController.requestReview()
   }
   
   private init() { }

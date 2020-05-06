@@ -38,7 +38,7 @@ final class ForecasterViewReactor: Reactor {
     case .forecast:
       AnalyticsManager.shared.makeLogEvent(.forecast)
       
-      let forecastedLottery = LotteryManager.shared.makeRandomNumbers(highestNumber: 45, lotteryCount: 6)
+      let forecastedLottery = LotteryManager.shared.raffleLottery(highestNumber: 45, lotteryCount: 6)
       
       return Observable.just(.setLottery(forecastedLottery))
     }

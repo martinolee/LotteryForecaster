@@ -50,6 +50,6 @@ final class ForecasterViewController: UIViewController {
     }
     .disposed(by: disposeBag)
     
-    navigationItem.leftBarButtonItem = UIBarButtonItem(customView: cameraButton)
+//    navigationItem.leftBarButtonItem = UIBarButtonItem(customView: cameraButton)
   }
 }

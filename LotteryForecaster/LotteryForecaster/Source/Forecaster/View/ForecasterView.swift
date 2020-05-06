@@ -15,6 +15,17 @@ import Then
 final class ForecasterView: UIView, View {
   // MARK: - Properties
   
+  enum UI {
+    case rowHeight
+    
+    var cgFloat: CGFloat {
+      switch self {
+      case .rowHeight:
+        return 50
+      }
+    }
+  }
+  
   var disposeBag = DisposeBag()
   
   private lazy var collectionViewFlowLayout = UICollectionViewFlowLayout()
@@ -37,6 +48,7 @@ final class ForecasterView: UIView, View {
   }
   
   private lazy var forecastHistoryTableView = UITableView().then {
+    $0.rowHeight = UI.rowHeight.cgFloat
     $0.tableFooterView = UIView()
     
     $0.register(cell: ForecastedLotteryCell.self)
@@ -90,7 +102,7 @@ final class ForecasterView: UIView, View {
     // MARK: - State
     
     reactor.state
-      .map { $0.forecastedLottery ?? [] }
+      .map { $0.forecastedLottery ?? LotteryManager.shared.setUpInitialState(highestNumber: 45) }
       .bind(to: ballsCollectionView.rx.items(cellIdentifier: BallCollectionViewCell.identifier)) { index, number, cell in
         guard let cell = cell as? BallCollectionViewCell else { return }
         

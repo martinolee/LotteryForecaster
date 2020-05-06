@@ -20,6 +20,7 @@ class SettingView: UIView, View {
     $0.tableFooterView = UIView()
     
     $0.register(cell: UITableViewCell.self)
+    $0.register(cell: VersionTableViewCell.self)
   }
   
   // MARK: - Life Cycle
@@ -41,8 +42,22 @@ class SettingView: UIView, View {
     
     reactor.state
       .map { $0.setting }
-      .bind(to: settingTableView.rx.items(cellIdentifier: UITableViewCell.identifier)) { indexPath, setting, cell in
-        cell.textLabel?.text = setting.title
+      .bind(to: settingTableView.rx.items) { tableView, row, setting -> UITableViewCell in
+        switch setting {
+        case .license, .email, .rate:
+          return tableView.dequeue(UITableViewCell.self).then {
+            $0.textLabel?.text = setting.title
+          }
+          
+        case .version:
+          return tableView.dequeue(VersionTableViewCell.self).then {
+            $0.textLabel?.text = setting.title
+            
+            if let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
+              $0.detailTextLabel?.text = "\(appVersion)"
+            }
+          }
+        }
     }
     .disposed(by: disposeBag)
   }

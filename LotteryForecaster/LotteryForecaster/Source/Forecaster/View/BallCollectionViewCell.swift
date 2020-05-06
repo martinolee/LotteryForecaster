@@ -11,8 +11,20 @@ import UIKit
 class BallCollectionViewCell: UICollectionViewCell {
   // MARK: - Property
   
+  enum UI {
+    case inset
+    
+    var cgFloat: CGFloat {
+      switch self {
+      case .inset:
+        return 32
+      }
+    }
+  }
+  
   private lazy var numberLabel = UILabel().then {
     $0.clipsToBounds = true
+    $0.layer.cornerRadius = (UIScreen.main.bounds.width / 3 - UI.inset.cgFloat * 2) / 2
     $0.font = .systemFont(ofSize: 28, weight: .bold)
     $0.textAlignment = .center
     $0.textColor = .white
@@ -27,7 +39,7 @@ class BallCollectionViewCell: UICollectionViewCell {
     setUpAttribute()
     addAllSubviews()
     setUpAutoLayout()
-    makeCircleLabel()
+//    makeCircleLabel()
   }
   
   required init?(coder: NSCoder) {
@@ -37,7 +49,7 @@ class BallCollectionViewCell: UICollectionViewCell {
   override func layoutSubviews() {
     super.layoutSubviews()
     
-    makeCircleLabel()
+//    makeCircleLabel()
   }
   
   // MARK - SetUp UI
@@ -52,7 +64,7 @@ class BallCollectionViewCell: UICollectionViewCell {
   
   private func setUpAutoLayout() {
     numberLabel.snp.makeConstraints {
-      $0.edges.equalToSuperview().inset(32)
+      $0.edges.equalToSuperview().inset(UI.inset.cgFloat)
     }
   }
   
