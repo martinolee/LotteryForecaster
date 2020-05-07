@@ -7,14 +7,9 @@
 //
 
 import UIKit
-import RxSwift
-import RxCocoa
-import ReactorKit
 
-class SettingView: UIView, View {
+class SettingView: UIView {
   // MARK: - Properties
-  
-  var disposeBag = DisposeBag()
   
   lazy var settingTableView = UITableView().then {
     $0.tableFooterView = UIView()
@@ -35,31 +30,6 @@ class SettingView: UIView, View {
   
   required init?(coder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
-  }
-  
-  func bind(reactor: SettingViewReactor) {
-    // MARK: - State
-    
-    reactor.state
-      .map { $0.setting }
-      .bind(to: settingTableView.rx.items) { tableView, row, setting -> UITableViewCell in
-        switch setting {
-        case .license, .email, .rate:
-          return tableView.dequeue(UITableViewCell.self).then {
-            $0.textLabel?.text = setting.title
-          }
-          
-        case .version:
-          return tableView.dequeue(VersionTableViewCell.self).then {
-            $0.textLabel?.text = setting.title
-            
-            if let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
-              $0.detailTextLabel?.text = "\(appVersion)"
-            }
-          }
-        }
-    }
-    .disposed(by: disposeBag)
   }
   
   // MARK: - Set Up UI

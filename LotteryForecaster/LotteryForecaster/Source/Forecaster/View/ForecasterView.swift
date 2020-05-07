@@ -7,12 +7,9 @@
 //
 
 import UIKit
-import RxSwift
-import RxCocoa
-import ReactorKit
 import Then
 
-final class ForecasterView: UIView, View {
+final class ForecasterView: UIView, ViewSetup {
   // MARK: - Properties
   
   enum UI {
@@ -26,11 +23,13 @@ final class ForecasterView: UIView, View {
     }
   }
   
-  var disposeBag = DisposeBag()
+  let cameraButton = UIButton(type: .system).then {
+    $0.setImage(UIImage(systemName: "camera"), for: .normal)
+  }
   
-  private lazy var collectionViewFlowLayout = UICollectionViewFlowLayout()
+  var collectionViewFlowLayout = UICollectionViewFlowLayout()
   
-  private lazy var ballsCollectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewFlowLayout).then {
+  lazy var ballsCollectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewFlowLayout).then {
     $0.showsVerticalScrollIndicator = false
     $0.showsHorizontalScrollIndicator = false
     $0.bounces = false
@@ -42,25 +41,17 @@ final class ForecasterView: UIView, View {
     $0.register(cell: BallCollectionViewCell.self)
   }
   
-  private lazy var forecastButton = UIButton(type: .system).then {
+  var forecastButton = UIButton(type: .system).then {
     $0.titleLabel?.font = .systemFont(ofSize: 30, weight: .light)
     $0.setTitle("Forecast", for: .normal)
   }
   
-  private lazy var forecastHistoryTableView = UITableView().then {
+  var forecastHistoryTableView = UITableView().then {
     $0.rowHeight = UI.rowHeight.cgFloat
     $0.tableFooterView = UIView()
     
     $0.register(cell: ForecastedLotteryCell.self)
   }
-  
-  private lazy var button: UIButton = {
-    let button = UIButton()
-    
-    button.setTitle("Forecast", for: .normal)
-    
-    return button
-  }()
   
   // MARK: - Life Cycle
   
@@ -82,51 +73,13 @@ final class ForecasterView: UIView, View {
     setUpFlowLayout()
   }
   
-  func bind(reactor: ForecasterViewReactor) {
-    // MARK: - Action
-    
-    forecastHistoryTableView.rx
-      .itemSelected
-      .bind { [weak self] indexPath in
-        guard let self = self else { return }
-        
-        self.forecastHistoryTableView.deselectRow(at: indexPath, animated: true)
-    }
-    .disposed(by: disposeBag)
-    
-    forecastButton.rx.tap
-      .map { Reactor.Action.forecast }
-      .bind(to: reactor.action)
-      .disposed(by: disposeBag)
-    
-    // MARK: - State
-    
-    reactor.state
-      .map { $0.forecastedLottery ?? LotteryManager.shared.setUpInitialState(highestNumber: 45) }
-      .bind(to: ballsCollectionView.rx.items(cellIdentifier: BallCollectionViewCell.identifier)) { index, number, cell in
-        guard let cell = cell as? BallCollectionViewCell else { return }
-        
-        cell.configure(number: number)
-    }
-    .disposed(by: disposeBag)
-    
-    reactor.state
-      .map { $0.lotteryHistory }
-      .bind(to: forecastHistoryTableView.rx.items(cellIdentifier: ForecastedLotteryCell.identifier)) { indexPath, numbers, cell in
-        guard let cell = cell as? ForecastedLotteryCell else { return }
-        
-        cell.configure(numbers: numbers)
-    }
-    .disposed(by: disposeBag)
-  }
-  
   // MARK: - Setup UI
   
-  private func setUpAttribute() {
+  func setUpAttribute() {
     self.backgroundColor = .systemBackground
   }
   
-  private func addAllSubviews() {
+  func addAllSubviews() {
     self.addSubviews([
       ballsCollectionView,
       forecastHistoryTableView,
@@ -134,8 +87,9 @@ final class ForecasterView: UIView, View {
     ])
   }
   
-  private func setUpAutoLayout() {
+  func setUpAutoLayout() {
     let safeArea = safeAreaLayoutGuide
+    
     ballsCollectionView.snp.makeConstraints {
       $0.top.leading.trailing.equalTo(safeArea)
       $0.height.equalTo(safeArea).multipliedBy(0.45)

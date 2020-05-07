@@ -9,12 +9,13 @@
 import UIKit
 import MessageUI
 import RxSwift
+import ReactorKit
 import AcknowList
 
-class SettingViewController: UIViewController {
+class SettingViewController: UIViewController, View {
   // MARK: - Properties
   
-  private let disposeBag = DisposeBag()
+  var disposeBag = DisposeBag()
   
   private let settingView = SettingView()
   
@@ -24,11 +25,10 @@ class SettingViewController: UIViewController {
     super.viewDidLoad()
     
     setUpRootView()
-    bind()
   }
   
   private func setUpRootView() {
-    settingView.reactor = SettingViewReactor()
+    self.reactor = SettingViewReactor()
     
     view.addSubview(settingView)
     
@@ -39,7 +39,32 @@ class SettingViewController: UIViewController {
   
   // MARK: - Action
   
-  private func bind() {
+  func bind(reactor: SettingViewReactor) {
+    // MARK: - State
+    
+    reactor.state
+      .map { $0.setting }
+      .bind(to: settingView.settingTableView.rx.items) { tableView, row, setting -> UITableViewCell in
+        switch setting {
+        case .license, .email, .rate:
+          return tableView.dequeue(UITableViewCell.self).then {
+            $0.textLabel?.text = setting.title
+          }
+          
+        case .version:
+          return tableView.dequeue(VersionTableViewCell.self).then {
+            $0.textLabel?.text = setting.title
+            
+            if let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
+              $0.detailTextLabel?.text = "\(appVersion)"
+            }
+          }
+        }
+    }
+    .disposed(by: disposeBag)
+    
+    // MARK: - Action
+    
     settingView.settingTableView.rx.itemSelected
       .bind { [weak self] indexPath in
         guard let self = self, let navigationController = self.navigationController else { return }
