@@ -19,6 +19,11 @@
 		72640F8124601B7100D5B565 /* EmailManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72640F8024601B7100D5B565 /* EmailManager.swift */; };
 		728309892463F7010043D0FD /* ViewControllerSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728309882463F7010043D0FD /* ViewControllerSetup.swift */; };
 		7283098B2463F76D0043D0FD /* ViewSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7283098A2463F76D0043D0FD /* ViewSetup.swift */; };
+		7295A7B12468EE3E00EBA057 /* ScanningError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7295A7B02468EE3E00EBA057 /* ScanningError.swift */; };
+		7295A7B42468EFBA00EBA057 /* ScanningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7295A7B32468EFBA00EBA057 /* ScanningViewController.swift */; };
+		7295A7B62468EFC100EBA057 /* ScanningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7295A7B52468EFC100EBA057 /* ScanningView.swift */; };
+		7295A7B82468F0E200EBA057 /* ScanningViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7295A7B72468F0E200EBA057 /* ScanningViewReactor.swift */; };
+		7295A7BA2468F23D00EBA057 /* ScanningManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7295A7B92468F23D00EBA057 /* ScanningManager.swift */; };
 		729A1687246107EF00625196 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 729A1686246107EF00625196 /* GoogleService-Info.plist */; };
 		729A1689246112D700625196 /* AnalyticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729A1688246112D700625196 /* AnalyticsManager.swift */; };
 		729A168D24611D0B00625196 /* Pods-LotteryForecaster-acknowledgements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 729A168A24611A3A00625196 /* Pods-LotteryForecaster-acknowledgements.plist */; };
@@ -77,6 +82,11 @@
 		72640F8024601B7100D5B565 /* EmailManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailManager.swift; sourceTree = "<group>"; };
 		728309882463F7010043D0FD /* ViewControllerSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerSetup.swift; sourceTree = "<group>"; };
 		7283098A2463F76D0043D0FD /* ViewSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewSetup.swift; sourceTree = "<group>"; };
+		7295A7B02468EE3E00EBA057 /* ScanningError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanningError.swift; sourceTree = "<group>"; };
+		7295A7B32468EFBA00EBA057 /* ScanningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanningViewController.swift; sourceTree = "<group>"; };
+		7295A7B52468EFC100EBA057 /* ScanningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanningView.swift; sourceTree = "<group>"; };
+		7295A7B72468F0E200EBA057 /* ScanningViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanningViewReactor.swift; sourceTree = "<group>"; };
+		7295A7B92468F23D00EBA057 /* ScanningManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanningManager.swift; sourceTree = "<group>"; };
 		729A1686246107EF00625196 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		729A1688246112D700625196 /* AnalyticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsManager.swift; sourceTree = "<group>"; };
 		729A168A24611A3A00625196 /* Pods-LotteryForecaster-acknowledgements.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Pods-LotteryForecaster-acknowledgements.plist"; path = "../../Pods/Target Support Files/Pods-LotteryForecaster/Pods-LotteryForecaster-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -163,6 +173,16 @@
 			path = Protocol;
 			sourceTree = "<group>";
 		};
+		7295A7B22468EF6500EBA057 /* Scanning */ = {
+			isa = PBXGroup;
+			children = (
+				7295A7B52468EFC100EBA057 /* ScanningView.swift */,
+				7295A7B72468F0E200EBA057 /* ScanningViewReactor.swift */,
+				7295A7B32468EFBA00EBA057 /* ScanningViewController.swift */,
+			);
+			path = Scanning;
+			sourceTree = "<group>";
+		};
 		729A169224613A9700625196 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -226,6 +246,7 @@
 			children = (
 				72B5BE6A245C7875006E8BB5 /* ForecasterModel.swift */,
 				72640F7824600F8200D5B565 /* Setting.swift */,
+				7295A7B02468EE3E00EBA057 /* ScanningError.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -261,6 +282,7 @@
 				72B5BE5F245C7593006E8BB5 /* Application */,
 				728309872463F6F20043D0FD /* Protocol */,
 				72B5BE72245D82A8006E8BB5 /* Forecaster */,
+				7295A7B22468EF6500EBA057 /* Scanning */,
 				72B5BE7D245D867A006E8BB5 /* Setting */,
 				72B5BE69245C7862006E8BB5 /* Model */,
 				72B5BE9F245E9A63006E8BB5 /* Manager */,
@@ -308,6 +330,7 @@
 				72640F7E24601A9800D5B565 /* RatingManager.swift */,
 				72640F8024601B7100D5B565 /* EmailManager.swift */,
 				729A1688246112D700625196 /* AnalyticsManager.swift */,
+				7295A7B92468F23D00EBA057 /* ScanningManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -514,6 +537,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				72B5BE82245D86BC006E8BB5 /* SettingViewReactor.swift in Sources */,
+				7295A7B42468EFBA00EBA057 /* ScanningViewController.swift in Sources */,
 				72B5BE6E245C8005006E8BB5 /* UIViewExtension.swift in Sources */,
 				721A8105245FCDC60051568E /* Ball.swift in Sources */,
 				72B5BE86245D8774006E8BB5 /* RootViewController.swift in Sources */,
@@ -525,7 +549,10 @@
 				72B5BE6B245C7875006E8BB5 /* ForecasterModel.swift in Sources */,
 				721A8107245FCE930051568E /* UIColorExtension.swift in Sources */,
 				72B5BE8C245D90E8006E8BB5 /* UITableViewExtension.swift in Sources */,
+				7295A7B62468EFC100EBA057 /* ScanningView.swift in Sources */,
+				7295A7B12468EE3E00EBA057 /* ScanningError.swift in Sources */,
 				72B5BE88245D8F83006E8BB5 /* Identifiable.swift in Sources */,
+				7295A7B82468F0E200EBA057 /* ScanningViewReactor.swift in Sources */,
 				720C9F0E245F07D200A05696 /* UICollectionViewExtension.swift in Sources */,
 				7283098B2463F76D0043D0FD /* ViewSetup.swift in Sources */,
 				72B5BE77245D832A006E8BB5 /* ForecastedLotteryCell.swift in Sources */,
@@ -534,6 +561,7 @@
 				72640F8124601B7100D5B565 /* EmailManager.swift in Sources */,
 				729A1689246112D700625196 /* AnalyticsManager.swift in Sources */,
 				72B5BE4B245C7016006E8BB5 /* AppDelegate.swift in Sources */,
+				7295A7BA2468F23D00EBA057 /* ScanningManager.swift in Sources */,
 				72B5BE8A245D9004006E8BB5 /* UITableViewCellExtension.swift in Sources */,
 				728309892463F7010043D0FD /* ViewControllerSetup.swift in Sources */,
 				720C9F10245F080900A05696 /* UICollectionViewCellExtension.swift in Sources */,
